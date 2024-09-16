@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>motivakcion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #contenedor {
+            margin: 50px auto; 
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carrusel {
+            width: 100%;
+            display: flex;
+            transition: transform 0.5s ease-in-out; /* Añade una transición suave */
+        }
+
+        .quote {
+            min-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px; /* Añade un poco de espacio alrededor del texto */
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 70px;
+            margin-top: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+        <div class="carrusel" id="carrusel">
+            <div class="quote" id="qt1">Mejoro cuanto más practico.</div>
+            <div class="quote" id="qt2">Siempre hay una solución.</div>
+            <div class="quote" id="qt3">Me enfoco en mi futuro.</div>
+            <div class="quote" id="qt4">El silencio habla por sí solo.</div>
+        </div>
+    </div>
+    <div>
+        <img src="motivakcion.png" alt="logo" class="logo"> 
+    </div>
+
+    <script>
+        const carrusel = document.getElementById('carrusel');
+        let indiceActual = 0;
+
+        // Función para mover el carrusel
+        function moverCarrusel() {
+            // Calcula la posición del carrusel
+            const translateX = -indiceActual * 100 + '%';
+            carrusel.style.transform = `translateX(${translateX})`;
+        }
+
+        // Agrega un evento de clic al contenedor para cambiar de frase
+        document.getElementById('contenedor').addEventListener('click', function() {
+            indiceActual = (indiceActual + 1) % carrusel.children.length;
+            moverCarrusel();
+        });
+
+        // Inicia el carrusel en la primera frase
+        moverCarrusel();
+    </script>
+</body>
+</html>
