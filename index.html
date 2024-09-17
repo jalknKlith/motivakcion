@@ -38,9 +38,9 @@
             padding: 20px; /* Espacio alrededor del texto */
         }
 
-        /* Texto de la cita */
+        /* Texto */
         .quote p {
-        text-align: center; /* Centra el texto dentro de la cita */
+        text-align: center; /* Centrar texto */
         }
 
         body {
@@ -70,11 +70,11 @@
         }
 
         .logo {
-            max-width: 40px; /* Reduce el tamaño del logo en pantallas pequeñas */
+            max-width: 40px; /* Reducir el logo en pantallas pequeñas */
         }
 
         .carrusel {
-            font-size: 16px; /* Reduce el tamaño del texto en pantallas pequeñas */
+            font-size: 16px; /* Reducir texto en pantallas pequeñas */
             }
         }
     </style>
@@ -95,6 +95,7 @@
             <div class="quote" id="qt4">Mi determinación es superpoder.</div>
             <div class="quote" id="qt4">Creo en mi.</div>
             <div class="quote" id="qt4">La fuerza despierta dentro de mi.</div>
+            <div class="quote" id="qt4">Controlo mi vida y elijo dejar ir todo lo negativo.</div>
         </div>
     </div>
     <div>
@@ -112,13 +113,13 @@
             carrusel.style.transform = `translateX(${translateX})`;
         }
 
-        // Agrega un evento de clic al contenedor para cambiar de frase
+        // Agregar un evento de clic al contenedor para cambiar de frase
         document.getElementById('contenedor').addEventListener('click', function() {
             indiceActual = (indiceActual + 1) % carrusel.children.length;
             moverCarrusel();
         });
 
-        // Inicia el carrusel en la primera frase
+        // Iniciar el carrusel en la primera frase
         moverCarrusel();
     </script>
 </body>
