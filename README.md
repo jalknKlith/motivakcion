@@ -18,18 +18,6 @@
 
 1. Clona el repositorio:
    ```
-   git clone https://github.com/tu-usuario/motivakcion.git
+   git clone https://github.com/jalknklith/motivakcion.git
    ```
-2. Abre `index.html` en tu navegador.
-
-### Contribuciones 🤝
-
-¡Se agradecen las contribuciones! Siéntete libre de abrir un _issue_ o enviar un _pull request_ con nuevas características, correcciones de errores o frases inspiradoras adicionales.
-
-### Captura de pantalla 📸
-
-![Captura de pantalla de Motivakcion](motivakcion.png)
-
-### Licencia 📄
-
-Este proyecto está bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
+2. Abre [`index.html` en tu navegador.](https://jalknklith.github.io/motivakcion/)
